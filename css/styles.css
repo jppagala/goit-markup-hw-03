@@ -1,0 +1,192 @@
+:root {
+  --IRIS: #4d5ae5;
+  --OCEAN: #404bbf;
+  --NAVY-BLUE: #2e2f42;
+  --GREEN: #31d0aa;
+  --SLATE: #434455;
+  --LIGHT-SLATE: #8e8f99;
+  --CORNFLOWER: #e7e9fc;
+  --CLOUD: #f4f4fd;
+  --NAVY-BLUE-modal: rgba(46, 47, 66, 0.4);
+  --GRAY: rgba(46, 47, 66, 0.7);
+  --WHITE: #fff;
+  --DAIRY: #fcfcfc;
+}
+
+body {
+  font-family: Roboto, Sans Serif;
+  color: var(--SLATE);
+}
+
+.header-logo {
+  text-decoration: none;
+  color: var(--NAVY-BLUE);
+  font-family: Raleway, Sans Serif;
+  font-size: 18px;
+  line-height: 1.16667;
+  font-weight: 800;
+  letter-spacing: 0.54px;
+  text-transform: uppercase;
+}
+
+.logo-web {
+  color: var(--IRIS);
+}
+
+.menu-nav,
+.address-links,
+.features-list,
+.what-we-do,
+.team-list,
+.filter-list,
+.project-list {
+  list-style-type: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--NAVY-BLUE);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+}
+
+.active-link,
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  color: var(--OCEAN);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+}
+
+.mail-link,
+.tel-link {
+  text-decoration: none;
+  color: var(--SLATE);
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+}
+
+.mail-link:hover,
+.tel-link:hover,
+.mail-link:focus,
+.tel-link:focus,
+.mail-link:active,
+.tel-link:active {
+  color: var(--OCEAN);
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+}
+
+.hero-section {
+  background-color: var(--NAVY-BLUE);
+}
+
+.main-header {
+  color: var(--WHITE);
+  text-align: center;
+  font-size: 56px;
+  line-height: 1.07143;
+  letter-spacing: 1.12px;
+}
+
+.button-order-service {
+  border-radius: 4px;
+  background: var(--IRIS);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+  color: var(--WHITE);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+  cursor: pointer;
+}
+
+.button-order-service:hover,
+.button-order-service:focus,
+.button-order-service:active {
+  background: var(--OCEAN);
+}
+
+.section-header {
+  color: var(--NAVY-BLUE);
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+}
+
+.feature-item,
+.team-member,
+.project-title {
+  color: var(--NAVY-BLUE);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+}
+
+.feature-item-content,
+.project-type {
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.member-title {
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+}
+
+.page-footer {
+  background-color: var(--NAVY-BLUE);
+}
+
+.footer-logo {
+  text-decoration: none;
+  color: var(--CLOUD);
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.16667;
+  letter-spacing: 0.54px;
+  text-transform: uppercase;
+}
+
+.footer-text {
+  color: var(--CLOUD);
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+}
+
+.filter-button {
+  border-radius: 4px;
+  background: var(--CLOUD);
+  border: 1px solid var(--CORNFLOWER);
+  color: var(--IRIS);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+}
+
+.filter-button:hover,
+.filter-button:focus,
+.filter-button:active,
+.filter-active {
+  background: var(--OCEAN);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+  color: var(--WHITE);
+  cursor: pointer;
+}
