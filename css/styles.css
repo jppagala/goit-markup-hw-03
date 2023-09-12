@@ -23,9 +23,10 @@
 
 body {
   font-family: Roboto, Sans Serif;
-  background-color: var(--WHITE);
+  background: var(--WHITE);
   color: var(--SLATE);
   width: 1440px;
+  margin: 0px;
 }
 
 h1,
@@ -42,6 +43,7 @@ p {
 /*#########################################*/
 
 .container {
+  display: block;
   width: 1158px;
   padding: 0px 15px;
   margin-left: auto;
@@ -50,8 +52,7 @@ p {
 
 .hero-container,
 .footer-container {
-  width: 1440px;
-  background-color: var(--NAVY-BLUE);
+  background: var(--NAVY-BLUE);
 }
 
 /*#########################################*/
@@ -88,7 +89,11 @@ p {
   font-weight: 800;
   letter-spacing: 0.54px;
   text-transform: uppercase;
-  padding: 1.5px 0px;
+  align-items: center;
+}
+
+.logo > p {
+  padding: 0px 0px;
 }
 
 .header-logo {
@@ -151,28 +156,58 @@ p {
   letter-spacing: 0.32px;
 }
 
+.top-line {
+  border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
+}
+
 .page-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 0px;
-  border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
+  padding: 24px 0px 23px;
 }
 
-.navigation {
-  display: flex;
-  align-items: center;
-  column-gap: 76px;
+.navigation,
+.menu-nav,
+.address-links,
+.navigation > .logo,
+.menu-nav-item,
+.address-links-item {
+  display: inline-block;
 }
 
-.menu-nav {
-  display: flex;
-  column-gap: 40px;
+.navigation > .logo {
+  margin-right: 76px;
 }
 
-.address-links {
-  display: flex;
-  column-gap: 40px;
+.menu-nav-item,
+.address-links-item {
+  margin-right: 40px;
+}
+
+.menu-nav-item:last-child,
+.address-links-item:last-child {
+  margin-right: 0px;
+}
+
+.menu-nav-item:nth-child(1) {
+  width: 48px;
+}
+
+.menu-nav-item:nth-child(2) {
+  width: 66px;
+}
+
+.menu-nav-item:nth-child(3) {
+  width: 67px;
+}
+
+.address-links-item:nth-child(1) {
+  width: 153px;
+}
+
+.address-links-item:nth-child(2) {
+  width: 151px;
 }
 
 /*#########################################*/
@@ -180,26 +215,25 @@ p {
 /*#########################################*/
 
 .section.hero-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 188px 0px;
-  row-gap: 48px;
+  text-align: center;
 }
 
 .main-header {
+  margin-left: auto;
+  margin-right: auto;
   color: var(--WHITE);
-  text-align: center;
   font-size: 56px;
   line-height: 1.07143;
   letter-spacing: 1.12px;
+  margin-bottom: 48px;
+  width: 496px;
 }
 
 .button-order-service {
   border-radius: 4px;
   background: var(--IRIS);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  border: 4px solid var(--IRIS);
 
   color: var(--WHITE);
   font-size: 16px;
@@ -208,8 +242,7 @@ p {
   letter-spacing: 0.64px;
   cursor: pointer;
 
-  display: inline-flex;
-  padding: 16px 32px;
+  padding: 14px 32px;
 }
 
 .button-order-service:hover,
@@ -238,53 +271,77 @@ p {
   letter-spacing: 0.32px;
 }
 
-.features-list {
-  display: flex;
-  column-gap: 24px;
+.features-list-item {
+  display: inline-block;
+  width: 264px;
+  margin-right: 20px;
 }
 
-.features-list-item {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 264px;
-  row-gap: 8px;
+.features-list-item:last-child {
+  margin-right: 0px;
+}
+
+.feature-item {
+  margin-bottom: 8px;
 }
 
 .what-we-do {
-  display: flex;
   padding-top: 72px;
-  column-gap: 24px;
-}
-
-.we-do-item {
   line-height: 0px;
 }
 
+.we-do-item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.we-do-item > img {
+  display: block;
+}
+
+.we-do-item:last-child {
+  margin-right: 0px;
+}
+
+.our-team {
+  background: var(--CLOUD);
+}
+
 .team-list {
-  display: flex;
-  column-gap: 24px;
   padding-top: 72px;
 }
 
 .team-card {
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
+  background: var(--WHITE);
+  margin-right: 20px;
   padding-bottom: 32px;
-  row-gap: 32px;
+  border-radius: 0px 0px 4px 4px;
+  background: --WHITE;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.team-card:last-child {
+  margin-right: 0px;
+}
+
+.team-card > img {
+  display: block;
+  margin-bottom: 32px;
 }
 
 .card-content {
-  display: flex;
-  flex-direction: column;
-  row-gap: 8px;
+  background: var(--WHITE);
+  text-align: center;
 }
 
 .team-member {
-  text-align: center;
+  margin-bottom: 8px;
 }
 
 .member-title {
-  text-align: center;
   line-height: 1.5;
   letter-spacing: 0.32px;
 }
@@ -294,36 +351,39 @@ p {
 /*#########################################*/
 
 .footer-container {
-  background-color: var(--NAVY-BLUE);
+  background: var(--NAVY-BLUE);
 }
 
 .page-footer {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   padding: 100px 0px;
-  row-gap: 16px;
-  max-width: 264px;
 }
 
-.page-footer > .logo {
-  max-width: 115px;
+.page-footer > a.logo > p {
+  margin-bottom: 16px;
+  padding: 1.5px 0px;
 }
 
 .footer-text {
   color: var(--CLOUD);
   line-height: 1.5;
   letter-spacing: 0.32px;
+  width: 264px;
 }
 
 /*#########################################*/
 /* Portfolio Content Styles */
 /*#########################################*/
 
+.filters {
+  padding-top: 96px;
+}
+
 .filter-button {
   border-radius: 4px;
   background: var(--CLOUD);
   border: 1px solid var(--CORNFLOWER);
+  padding: 11px 24px;
+
   color: var(--IRIS);
   text-align: center;
   font-size: 16px;
@@ -344,36 +404,47 @@ p {
 }
 
 .filter-list {
-  display: flex;
-  padding-top: 96px;
-  justify-content: center;
-  column-gap: 24px;
+  text-align: center;
 }
 
-.filter-button {
-  padding: 12px 24px;
+.filter-item {
+  display: inline-block;
+  margin-right: 20px;
 }
 
-.project-list {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 72px;
-  padding-bottom: 120px;
-  column-gap: 24px;
-  row-gap: 48px;
+.filter-item:last-child {
+  margin-right: 0px;
+}
+
+.projects {
+  padding: 72px 0px 120px;
 }
 
 .project-card {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 32px;
-  row-gap: 32px;
-  border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
+  display: inline-block;
+  margin-right: 20px;
+  padding-bottom: 31px;
+  border-bottom: 1px solid var(--CORNFLOWER);
+  background: var(--WHITE, #fff);
+}
+
+.project-card:nth-child(3n) {
+  margin-right: 0px;
+}
+
+.project-card:nth-child(n + 4) {
+  margin-top: 48px;
+}
+
+.project-card > img {
+  display: block;
+  margin-bottom: 32px;
 }
 
 .project-card-content {
-  display: flex;
-  flex-direction: column;
   padding: 0px 16px;
-  row-gap: 8px;
+}
+
+.project-title {
+  margin-bottom: 8px;
 }
